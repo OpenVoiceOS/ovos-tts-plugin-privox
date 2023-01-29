@@ -9,7 +9,7 @@ class PrivoxTTS(TTS):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.voice = self._get_voice()
-        self.key = self.config.get("key")
+        self.key = self.config.get("key", "3C338479FCA6AF07")
 
     def _get_voice(self, voice=None):
         voice = voice or self.voice or self.config.get("voice")
